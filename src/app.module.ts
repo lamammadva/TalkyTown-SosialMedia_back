@@ -36,12 +36,12 @@ import { RedisModule } from './shared/libs/redis/redis.module';
     }),
     MailerModule.forRoot({
       transport: {
-        host: 'smtp.gmail.com',
-        port: 587,
+        host: process.env.host,
+        port: process.env.port,
         secure: false,
         auth: {
-          user: 'lemanb.memmedova@gmail.com',
-          pass: 'qxigqrpcggcfvskx',
+          user: process.env.user,
+          pass: process.env.password,
         },
       },
       template: {

@@ -18,5 +18,12 @@ export default {
     port: +process.env.REDIS_PORT,
   },
   jwtsecret:process.env.JWT_SECRET,
-  app_url: process.env.APP_URL
+  app_url: process.env.APP_URL,
+  smtp:{
+    host:process.env.SMTP_HOST,
+    port: +process.env.SMTP_PORT,
+    user:process.env.SMTP_USER,
+    password: process.env.SMTP_PASSOWRD,
+
+  }
 };
