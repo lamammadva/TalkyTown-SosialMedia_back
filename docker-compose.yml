@@ -1,0 +1,12 @@
+version: '3.8'  # Specify the Docker Compose file format version
+
+services:
+  redis:
+    image: redis:latest          # Use the latest official Redis image
+    restart: always               # Automatically restart the container on failure
+    ports:
+      - '3005:6379'               # Map host port 3005 to container port 6379
+    volumes:
+      - redis_data:/data         # Use a named volume for persistent data
+volumes:
+  redis_data:                     # Define the named volume
